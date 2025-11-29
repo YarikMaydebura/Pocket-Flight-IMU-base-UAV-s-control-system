@@ -1,0 +1,138 @@
+<?xml version="1.0"?>
+<!--
+Version: 4.0 (Simulation with 16 drones)
+Prepared by: Shaiful Nizam
+Prepared on: 2022/05/23
+Note: Use this launch file to load the world in Gazebo.
+      To change the world file, I find it cleaner to do it directly in world.launch under the "world" arg parameter.
+      I find that giving "time" value in increments of 3 seconds is enough time to allow ROS to load and initialize 
+      the drone models. If there is not enough time, the drones will not behave properly in the simulation.
+-->
+<launch>
+  <arg name="paused" default="false"/>
+  <arg name="use_sim_time" default="true"/>
+  <arg name="gui" default="true"/><arg name="headless" default="false"/>
+  <arg name="debug" default="true"/>
+  <include file="$(find flood_monitor_16)/launch/world.launch">
+  </include>
+ <!--
+  <include file="$(find timed_roslaunch)/launch/timed_roslaunch.launch">
+    <arg name="time" value="3" />
+    <arg name="pkg" value="flood_monitor_16" />
+    <arg name="file" value="drone_monitor.launch" />
+    <arg name="node_name" value="drone_monitor" />
+  </include>
+-->
+  <include file="$(find timed_roslaunch)/launch/timed_roslaunch.launch">
+    <arg name="time" value="6" />
+    <arg name="pkg" value="flood_monitor_16" />
+    <arg name="file" value="drone01.launch" />
+    <arg name="node_name" value="drone01" />
+  </include>
+<!--
+  <include file="$(find timed_roslaunch)/launch/timed_roslaunch.launch">
+    <arg name="time" value="9" />
+    <arg name="pkg" value="flood_monitor_16" />
+    <arg name="file" value="drone02.launch" />
+    <arg name="node_name" value="drone02" />
+  </include>
+ 
+  <include file="$(find timed_roslaunch)/launch/timed_roslaunch.launch">
+    <arg name="time" value="12" />
+    <arg name="pkg" value="flood_monitor_16" />
+    <arg name="file" value="drone03.launch" />
+    <arg name="node_name" value="drone03" />
+  </include>
+
+  <include file="$(find timed_roslaunch)/launch/timed_roslaunch.launch">
+    <arg name="time" value="15" />
+    <arg name="pkg" value="flood_monitor_16" />
+    <arg name="file" value="drone04.launch" />
+    <arg name="node_name" value="drone04" />
+  </include>
+
+  <include file="$(find timed_roslaunch)/launch/timed_roslaunch.launch">
+    <arg name="time" value="18" />
+    <arg name="pkg" value="flood_monitor_16" />
+    <arg name="file" value="drone05.launch" />
+    <arg name="node_name" value="drone05" />
+  </include>
+
+  <include file="$(find timed_roslaunch)/launch/timed_roslaunch.launch">
+    <arg name="time" value="21" />
+    <arg name="pkg" value="flood_monitor_16" />
+    <arg name="file" value="drone06.launch" />
+    <arg name="node_name" value="drone06" />
+  </include>
+
+  <include file="$(find timed_roslaunch)/launch/timed_roslaunch.launch">
+    <arg name="time" value="24" />
+    <arg name="pkg" value="flood_monitor_16" />
+    <arg name="file" value="drone07.launch" />
+    <arg name="node_name" value="drone07" />
+  </include>
+
+  <include file="$(find timed_roslaunch)/launch/timed_roslaunch.launch">
+    <arg name="time" value="27" />
+    <arg name="pkg" value="flood_monitor_16" />
+    <arg name="file" value="drone08.launch" />
+    <arg name="node_name" value="drone08" />
+  </include>
+
+  <include file="$(find timed_roslaunch)/launch/timed_roslaunch.launch">
+    <arg name="time" value="30" />
+    <arg name="pkg" value="flood_monitor_16" />
+    <arg name="file" value="drone09.launch" />
+    <arg name="node_name" value="drone09" />
+  </include>
+
+  <include file="$(find timed_roslaunch)/launch/timed_roslaunch.launch">
+    <arg name="time" value="33" />
+    <arg name="pkg" value="flood_monitor_16" />
+    <arg name="file" value="drone10.launch" />
+    <arg name="node_name" value="drone10" />
+  </include>
+
+  <include file="$(find timed_roslaunch)/launch/timed_roslaunch.launch">
+    <arg name="time" value="36" />
+    <arg name="pkg" value="flood_monitor_16" />
+    <arg name="file" value="drone11.launch" />
+    <arg name="node_name" value="drone11" />
+  </include>
+
+  <include file="$(find timed_roslaunch)/launch/timed_roslaunch.launch">
+    <arg name="time" value="39" />
+    <arg name="pkg" value="flood_monitor_16" />
+    <arg name="file" value="drone12.launch" />
+    <arg name="node_name" value="drone12" />
+  </include>
+
+  <include file="$(find timed_roslaunch)/launch/timed_roslaunch.launch">
+    <arg name="time" value="42" />
+    <arg name="pkg" value="flood_monitor_16" />
+    <arg name="file" value="drone13.launch" />
+    <arg name="node_name" value="drone13" />
+  </include>
+
+  <include file="$(find timed_roslaunch)/launch/timed_roslaunch.launch">
+    <arg name="time" value="45" />
+    <arg name="pkg" value="flood_monitor_16" />
+    <arg name="file" value="drone14.launch" />
+    <arg name="node_name" value="drone14" />
+  </include>
+
+  <include file="$(find timed_roslaunch)/launch/timed_roslaunch.launch">
+    <arg name="time" value="48" />
+    <arg name="pkg" value="flood_monitor_16" />
+    <arg name="file" value="drone15.launch" />
+    <arg name="node_name" value="drone15" />
+  </include>
+
+  <include file="$(find timed_roslaunch)/launch/timed_roslaunch.launch">
+    <arg name="time" value="51" />
+    <arg name="pkg" value="flood_monitor_16" />
+    <arg name="file" value="drone16.launch" />
+    <arg name="node_name" value="drone16" />
+  </include>
+-->
+</launch>

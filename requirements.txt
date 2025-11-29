@@ -1,0 +1,11 @@
+# ROS Python library (install via apt on Ubuntu)
+# sudo apt-get install ros-noetic-rospy
+
+# Python dependencies
+numpy>=1.19.0
+opencv-python>=4.5.0
+websocket-client>=1.0.0
+configparser>=5.0.0
+
+# Optional but recommended
+matplotlib>=3.3.0
