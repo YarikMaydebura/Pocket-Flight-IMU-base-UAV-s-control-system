@@ -3,9 +3,7 @@
 
 # Python dependencies
 numpy>=1.19.0
-opencv-python>=4.5.0
 websocket-client>=1.0.0
-configparser>=5.0.0
 
-# Optional but recommended
+# Optional (for data_visualizer.py)
 matplotlib>=3.3.0

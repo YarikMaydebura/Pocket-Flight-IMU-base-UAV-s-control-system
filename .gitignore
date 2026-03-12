@@ -4,7 +4,6 @@ __pycache__/
 *$py.class
 *.so
 .Python
-build/
 develop-eggs/
 dist/
 downloads/
@@ -29,7 +28,7 @@ venv/
 ENV/
 env/
 
-# ROS
+# ROS / Catkin
 build/
 devel/
 logs/
@@ -55,12 +54,9 @@ logs/
 .Trashes
 ehthumbs.db
 Thumbs.db
-*~
 
 # Project specific
-images/drone*/
 *.csv
-drone_position.csv
 *.bag
 *.mp4
 *.avi

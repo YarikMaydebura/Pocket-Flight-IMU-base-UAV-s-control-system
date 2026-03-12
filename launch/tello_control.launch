@@ -1,0 +1,15 @@
+<launch>
+    <!-- DJI Tello real hardware launch file -->
+
+    <!-- Load IMU control parameters -->
+    <rosparam file="$(find pocketflight_imu)/config/imu_control.yaml" command="load" />
+
+    <!-- Start IMU publisher node (smartphone sensor bridge) -->
+    <node pkg="pocketflight_imu" type="imu_publisher.py" name="imu_publisher" output="screen" />
+
+    <!-- Start Tello controller node -->
+    <node pkg="pocketflight_imu" type="tello_controller.py" name="tello_controller" output="screen" />
+
+    <!-- Real hardware: do not use sim time -->
+    <param name="use_sim_time" value="false" />
+</launch>

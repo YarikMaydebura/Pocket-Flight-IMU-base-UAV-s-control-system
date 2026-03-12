@@ -24,8 +24,8 @@ Feature suggestions are welcome! Please create an issue with:
 
 1. **Fork the repository**
    ```bash
-   git clone https://github.com/YourUsername/PocketFlight.git
-   cd PocketFlight
+   git clone https://github.com/YarikMaydebura/Pocket-Flight-IMU-base-UAV-s-control-system.git
+   cd Pocket-Flight-IMU-base-UAV-s-control-system
    ```
 
 2. **Create a feature branch**
@@ -55,10 +55,6 @@ Feature suggestions are welcome! Please create an issue with:
    ```
 
 7. **Create a Pull Request**
-   - Go to the original repository on GitHub
-   - Click "New Pull Request"
-   - Select your feature branch
-   - Provide a clear description of your changes
 
 ## Code Style Guidelines
 
@@ -67,22 +63,6 @@ Feature suggestions are welcome! Please create an issue with:
 - Use meaningful variable names
 - Add docstrings to functions
 - Keep functions focused and concise
-
-Example:
-```python
-def calculate_velocity(imu_data, scaling_factor):
-    """
-    Calculate drone velocity from IMU data.
-
-    Args:
-        imu_data (dict): IMU sensor readings
-        scaling_factor (float): Velocity scaling factor
-
-    Returns:
-        float: Calculated velocity
-    """
-    return imu_data['acceleration'] * scaling_factor
-```
 
 ### ROS Nodes
 - Use clear, descriptive topic names
@@ -93,21 +73,19 @@ def calculate_velocity(imu_data, scaling_factor):
 ### Launch Files
 - Add comments explaining parameters
 - Use descriptive node names
-- Group related nodes together
 
 ## Areas for Contribution
 
 We welcome contributions in these areas:
 
-- **Documentation**: Improve installation guides, add tutorials
-- **Testing**: Add unit tests, integration tests
-- **Features**:
-  - Multi-drone coordination
-  - Improved flood detection algorithms
-  - Real hardware support (DJI Tello, etc.)
-  - Haptic feedback integration
+- **Sensor fusion**: Combine accelerometer, gyroscope, and magnetometer for better orientation estimation
+- **Mobile app**: Build a dedicated Android/iOS app to replace SensorServer
+- **Additional hardware**: Add support for more drone platforms (Crazyflie, Parrot, custom builds)
+- **Obstacle avoidance**: Integrate depth sensors or LiDAR for autonomous safety
+- **AI follow mode**: Implement computer vision-based person tracking for autonomous follow
 - **Performance**: Optimize control loops, reduce latency
-- **UI/UX**: Create ground control station interface
+- **Testing**: Add unit tests, integration tests
+- **Documentation**: Improve guides, add tutorials
 
 ## Questions?
 

@@ -1,0 +1,37 @@
+# PocketFlight IMU Control Configuration
+# ========================================
+
+# Smartphone connection settings
+phone:
+  ip: "192.168.0.243"
+  port: 8080
+
+# Drone settings
+drone:
+  name: "drone01"
+
+# Altitude control
+altitude:
+  takeoff: 2.0          # Target takeoff altitude (meters)
+  minimum: 1.0          # Safety minimum altitude (meters)
+  takeoff_speed: 0.5    # Ascent speed during takeoff (m/s)
+  tolerance: 0.3        # Altitude error tolerance (meters)
+
+# IMU filtering
+imu:
+  filter_alpha: 0.2     # Low-pass filter smoothing (0 = max smooth, 1 = no filter)
+  deadband: 0.2         # Ignore IMU values below this threshold
+  gravity: 9.81         # Gravity constant (m/s^2)
+
+# PID altitude controller
+pid:
+  kp: 0.5               # Proportional gain
+  ki: 0.1               # Integral gain
+  kd: 0.05              # Derivative gain
+
+# Velocity scaling
+velocity:
+  scaling_factor: 1.0   # Overall speed multiplier
+  max_horizontal: 2.0   # Maximum horizontal velocity (m/s)
+  max_vertical: 1.0     # Maximum vertical velocity (m/s)
+  max_yaw_rate: 1.0     # Maximum yaw rate (rad/s)

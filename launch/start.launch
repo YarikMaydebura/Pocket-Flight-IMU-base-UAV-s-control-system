@@ -1,16 +1,16 @@
 <launch>
-    <!-- Launch roscore -->
-    <node pkg="roslaunch" type="roscore" name="roscore" output="screen" />
+    <!-- Simulation mode argument (default: true for Gazebo) -->
+    <arg name="sim" default="true" />
 
-    <!-- Start IMU publisher node -->
-    <node pkg="flood_monitor_16" type="imu_publisher.py" name="imu_publisher" output="screen" />
+    <!-- Load IMU control parameters -->
+    <rosparam file="$(find pocketflight_imu)/config/imu_control.yaml" command="load" />
 
-    <!-- Launch the flood_monitor environment -->
-    <include file="$(find flood_monitor_16)/launch/flood_monitor.launch" />
+    <!-- Start IMU publisher node (smartphone sensor bridge) -->
+    <node pkg="pocketflight_imu" type="imu_publisher.py" name="imu_publisher" output="screen" />
 
-    <!-- Start the controller node -->
-    <node pkg="flood_monitor_16" type="controller.py" name="controller" output="screen" />
+    <!-- Start controller node (IMU-based drone control with PID) -->
+    <node pkg="pocketflight_imu" type="controller.py" name="controller" output="screen" />
 
-    <!-- Delay to allow Gazebo and other nodes to initialize -->
-    <param name="use_sim_time" value="true" />
+    <!-- Use simulation time when running in Gazebo -->
+    <param name="use_sim_time" value="$(arg sim)" />
 </launch>
